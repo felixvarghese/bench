@@ -197,7 +197,7 @@ install_packages() {
 			run_cmd bash -c "curl -sL https://deb.nodesource.com/setup_0.12 | bash -"
 		fi
 		run_cmd sudo apt-get update
-		run_cmd sudo apt-get install -y python-dev python-setuptools build-essential python-mysqldb git ntp vim screen htop mariadb-server mariadb-common libmariadbclient-dev  libxslt1.1 libxslt1-dev redis-server libssl-dev libcrypto++-dev postfix nginx supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base nodejs npm
+		run_cmd sudo apt-get install -y python-dev python-setuptools build-essential python-mysqldb git ntp vim screen htop mariadb-server mariadb-common libmariadbclient-dev  libxslt1.1 libxslt1-dev redis-server libssl-dev libcrypto++-dev postfix nginx supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base nodejs
 
 		echo "Installing wkhtmltopdf"
 		install_wkhtmltopdf_deb
