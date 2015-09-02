@@ -16,7 +16,7 @@ get_passwd() {
 }
 
 set_opts () {
-	OPTS=`getopt -o v --long verbose,mysql-root-password:,frappe-user:,bench-branch:,setup-production,skip-setup-bench,help -n 'parse-options' -- "$@"`
+	OPTS=`getopt -o v --long verbose,mysql-root-password:,frappe-user:,bench-branch:,setnoup-production,skip-setup-bench,help -n 'parse-options' -- "$@"`
 
 	if [ $? != 0 ] ; then echo "Failed parsing options." >&2 ; exit 1 ; fi
 
@@ -197,7 +197,7 @@ install_packages() {
 			run_cmd bash -c "curl -sL https://deb.nodesource.com/setup_0.12 | bash -"
 		fi
 		run_cmd sudo apt-get update
-		run_cmd sudo apt-get install -y python-dev python-setuptools build-essential python-mysqldb git ntp vim screen htop mariadb-server mariadb-common libmariadbclient-dev  libxslt1.1 libxslt1-dev redis-server libssl-dev libcrypto++-dev postfix nginx supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base nodejs npm
+		run_cmd sudo apt-get install -y python-dev python-setuptools build-essential python-mysqldb git ntp vim screen htop mariadb-server mariadb-common libmariadbclient-dev  libxslt1.1 libxslt1-dev redis-server libssl-dev libcrypto++-dev postfix nginx supervisor python-pip fontconfig libxrender1 libxext6 xfonts-75dpi xfonts-base
 
 		echo "Installing wkhtmltopdf"
 		install_wkhtmltopdf_deb
